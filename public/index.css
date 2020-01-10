@@ -92,13 +92,24 @@ body {
 
 /* dddddddddddddddddddddddddddddddddddd */
 #makeQuestions{
-    width: 370px;
-    height: 50px;
-    font-size: 30px;
+    width: 320px;
+    height: 30px;
+    font-size: 20px;
+    display: none;
+}
+
+.send{
+    /* height: 40px; */
+    border-style: none;
+    /* border-radius: 50px; */
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: limegreen;
+    display: none;
 }
 
 #where_make_questions{
-    display: none;
+    /* display: none; */
 }
 
 #controls{

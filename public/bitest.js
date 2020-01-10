@@ -4,6 +4,7 @@ const controls = document.getElementById('controls');
 const make_questions = document.getElementById('makeQuestions');
 const where_make_questions = document.getElementById('where_make_questions');
 const hand = document.getElementById('hand');
+const btnsend = document.getElementById('btnsend');
 
 const one = document.getElementById('one');
 const two = document.getElementById('two');
@@ -32,26 +33,37 @@ function showMessage(question) {
     setTimeout(function () { message.style.display = 'none'; }, 3000);
 }
 
-make_questions.addEventListener("keyup", e => {
-    if (e.keyCode == 13) {
-        e.preventDefault();
-        socket.emit('set-question', roomName, make_questions.value);
-        // clearInterval();
-        showMessage(make_questions.value);
+// make_questions.addEventListener("keyup", e => {
+//     if (e.keyCode == 13) {
+//         e.preventDefault();
+//         socket.emit('set-question', roomName, make_questions.value);
+//         // clearInterval();
+//         showMessage(make_questions.value);
 
-        //for phone keyboard
-        setTimeout(() => {
-            make_questions.focus();
-            setTimeout(() => {
-                where_make_questions.style.display = 'none';
-                make_questions.style.display = 'none';
-            }, 50)
-        }, 50)
+//         //for phone keyboard
+//         setTimeout(() => {
+//             make_questions.focus();
+//             setTimeout(() => {
+//                 where_make_questions.style.display = 'none';
+//                 make_questions.style.display = 'none';
+//             }, 50)
+//         }, 50)
 
 
-        hand.style.display = 'none';
-    }
-});
+//         hand.style.display = 'none';
+//     }
+// });
+
+function sendQ() {
+    socket.emit('set-question', roomName, make_questions.value);
+    showMessage(make_questions.value);
+
+    where_make_questions.style.display = 'none';
+    make_questions.style.display = 'none';
+    btnsend.style.display = 'none';
+
+    hand.style.display = 'none';
+}
 
 function showAnsw(ele) {
     ele.style.display = 'inline';
