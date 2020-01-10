@@ -1,3 +1,5 @@
+// This is not the best code I wrote, but... you know, passion projects
+
 const socket = io();
 
 const mistery = document.getElementById('mistery');

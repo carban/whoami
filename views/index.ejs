@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal 2 -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -55,11 +55,19 @@
             </div>
         </div>
     </center>
+    <footer>
+        <center>
+            <b>
+                By <a class="text-danger" href="https://github.com/carban/">Carban</a>
+            </b>
+        </center>
+
+    </footer>
     <script>
         const btnjoin = document.getElementById("lejoin");
         const inpjoin = document.getElementById("inJoin");
         btnjoin.addEventListener("click", () => {
-            window.location.replace(window.location.href+inpjoin.value);
+            window.location.replace(window.location.href + inpjoin.value);
         })
     </script>
     <script src="/socket.io/socket.io.js" charset="UTF-8"></script>

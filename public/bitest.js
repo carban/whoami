@@ -1,3 +1,5 @@
+// This is not the best code I wrote, but... you know, passion projects
+
 const controls = document.getElementById('controls');
 const make_questions = document.getElementById('makeQuestions');
 const where_make_questions = document.getElementById('where_make_questions');
