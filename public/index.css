@@ -1,0 +1,249 @@
+body {
+    /* background-color: #8FC2FA; */
+    background: rgb(34,193,195);
+    background: -moz-radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,152,253,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,152,253,1) 100%);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,152,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#2d98fd",GradientType=1);
+
+}
+ 
+#logo{
+    width: 345px;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#startButtons{
+    margin-bottom: 50px;
+}
+
+.wanna {
+    font-size: 40px;
+    width: 140px;
+}
+
+.wannaAns {
+    font-size: 28px; /*30 */
+    width: 200px;
+}
+
+.lemap {
+    margin:0 auto;
+    width: 300px; /*500*/
+    height: 340px; /*440*/
+    margin-top: 80px;
+    /* margin-bottom: 50px; */
+    /* background-color: blue; */
+}
+
+.papers {
+    position: fixed;
+    margin:0 auto;
+    width: 300px; 
+    height: 340px;
+    margin-top: 80px;
+    z-index: 2;
+    display: none;
+}
+
+.lecards {
+    position: fixed;
+    margin:0 auto;
+    width: 300px; 
+    height: 340px;
+    margin-top: 80px;
+    z-index: 1;
+}
+
+.hand{
+    position: fixed;
+    margin:0 auto;
+    width: 50px;
+    height: 50px;
+    margin-top: 225px;
+    margin-left: 125px;
+    border-style: dashed;
+    border-radius: 100px;
+    border-width: 5px;
+    border-color: yellow;
+    display: none;
+    /* background-color: red; */
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+/* dddddddddddddddddddddddddddddddddddd */
+#makeQuestions{
+    width: 370px;
+    height: 50px;
+    font-size: 30px;
+}
+
+#where_make_questions{
+    display: none;
+}
+
+#controls{
+    display: none;
+}
+
+.sendclass{
+    height: 50px;
+    font-size: 30px;
+}
+
+.misterys{
+    /* position: fixed;
+    margin-top: 120px; */
+    /* top: 50%; */
+    /* left: 40%; */
+    /* margin-top: -100px; */
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+}
+
+#colorone{
+    background-color: #FF0000;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+#colortwo{
+    background-color: #00FF00;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+#colorthree{
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+#one{
+    color: white;
+}
+
+#two{
+    color: white;
+}
+
+#three{
+    color: white;
+}
+
+#divOne{
+    display: none;
+}
+
+#divTwo{
+    display: none;
+}
+
+#divThree{
+    display: none;
+}
+
+#signgif{
+    position: fixed;
+    /* align-self: center; */
+    width: 50px;
+    left: 47%;
+    top: 11%;
+}
+
+#message{
+    position: fixed;
+    margin:0 auto;
+    width: 300px;
+    height: 60px;
+    font-size: 5px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: none;
+}
+
+#message:after{
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color:white;
+	border-bottom: 0;
+	margin-left: -10px;
+	margin-bottom: -10px;
+}
+
+#iknow{
+    position: fixed;
+    margin:0 auto;
+    margin-top: 100px;
+    width: 100%;
+    left: 0px;
+    font-size: 70px;
+    display: none;
+    /* opacity: 0.7; */
+    z-index: 2;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: yellow;
+
+}
+
+#ANSyes{
+    position: fixed;
+    margin:0 auto;
+    margin-top: 100px;
+    width: 100%;
+    left: 0px;
+    font-size: 100px;
+    display: none;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#ANSno{
+    position: fixed;
+    margin:0 auto;
+    margin-top: 270px;
+    width: 100%;
+    left: 0px;
+    font-size: 100px;
+    display: none;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#ANSyes2{
+    position: fixed;
+    margin:0 auto;
+    margin-top: 270px;
+    width: 100%;
+    left: 0px;
+    font-size: 100px;
+    display: none;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#ANSno2{
+    position: fixed;
+    margin:0 auto;
+    margin-top: 100px;
+    width: 100%;
+    left: 0px;
+    font-size: 100px;
+    display: none;
+    opacity: 0.7;
+    z-index: 2;
+}

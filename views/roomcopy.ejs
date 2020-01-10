@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who am i</title>
+    <script>
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <!-- <img id="signgif" src="sign.gif"> -->
+            <!-- ALERTS -->
+            <button class="animated jello btn btn-success" id="ANSyes"> <b>Yes</b> </button>
+            <button class="animated jello btn btn-danger" id="ANSno"> <b>No</b> </button>
+            <!--  -->
+            <button class="animated jello btn btn-success" id="ANSyes2"> <b>Yes</b> </button>
+            <button class="animated jello btn btn-danger" id="ANSno2"> <b>No</b> </button>
+
+            <div class="animated tada btn-warning" id="iknow"> <b>I KNOW IT!</b> </div>
+            
+            <!-- ALERTS -->
+
+            <div id="message" class="animated heartBeat">
+                <h5 id="Mess">Message</h5>
+            </div>
+
+            <img class="hand animated pulse infinite slow" src="hand.png" id="hand" alt="">
+
+            <!-- <h4 id="two" class="misterys"></h4>
+            <h4 id="three" class="misterys"></h4> -->
+            <img class="papers" id="papers" src="papers.png">
+            <img class="lecards" id="lecards" src="cards.png">
+            <img class="lemap" src="letest.png">
+            
+            <!-- <div class="lemap"></div> -->
+
+        </div>
+        <div class="row misterys">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">
+                <div id="colorone"></div>
+                <h6 id="one"></h6>
+            </div>
+            <div class="col">
+                <div id="colortwo"></div>
+                <h6 id="two"></h6>
+            </div>
+            <div class="col">
+                <div id="colorthree"></div>
+                <h6 id="three"></h6>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <button onclick="doAnimation()">P</button>
+        <button onclick="openIknow()">U</button>
+        <button onclick="doStart()">C</button>
+        <div id="controls">
+            <button id="btnYes" type="button" class="btn btn-success wannaAns" onclick="openYes()"> <b>Yes</b> </button>
+            <button id="btnNo" type="button" class="btn btn-danger wannaAns" onclick="openNo()"> <b>No</b> </button>
+        </div>
+        <div id="where_make_questions" class="">
+            <input type="text" id="makeQuestions">
+            <!-- <button type="button" class="sendclass btn-success" onclick="sendQuestion()">Send</button> -->
+        </div>
+
+
+
+    </center>
+
+    <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+
+    <!-- Changes on this link -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="bitest.js"></script>
+</body>
+
+</html>
