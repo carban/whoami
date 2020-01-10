@@ -33,27 +33,6 @@ function showMessage(question) {
     setTimeout(function () { message.style.display = 'none'; }, 3000);
 }
 
-// make_questions.addEventListener("keyup", e => {
-//     if (e.keyCode == 13) {
-//         e.preventDefault();
-//         socket.emit('set-question', roomName, make_questions.value);
-//         // clearInterval();
-//         showMessage(make_questions.value);
-
-//         //for phone keyboard
-//         setTimeout(() => {
-//             make_questions.focus();
-//             setTimeout(() => {
-//                 where_make_questions.style.display = 'none';
-//                 make_questions.style.display = 'none';
-//             }, 50)
-//         }, 50)
-
-
-//         hand.style.display = 'none';
-//     }
-// });
-
 function sendQ() {
     socket.emit('set-question', roomName, make_questions.value);
     showMessage(make_questions.value);
