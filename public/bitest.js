@@ -37,6 +37,7 @@ make_questions.addEventListener("keyup", e => {
         clearInterval();
         showMessage(make_questions.value);
         where_make_questions.style.display = 'none';
+        make_questions.style.display = 'none' //for phone keyboard
         hand.style.display = 'none';
     }
 });

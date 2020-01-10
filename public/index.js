@@ -49,6 +49,7 @@ socket.on('position', data => {
         if (personal.posi == 1) {
 
             where_make_questions.style.display = 'inline';
+            make_questions.style.display = 'inline';
             hand.style.display = 'inline';
 
             two.innerHTML = personal.two;
@@ -109,10 +110,12 @@ socket.on('get-no', d => {
 socket.on('next-step', player => {
     if (player == personal.posi) {
         where_make_questions.style.display = 'inline';
+        make_questions.style.display = 'inline';
         hand.style.display = 'inline';
         controls.style.display = 'none';
     } else {
         where_make_questions.style.display = 'none';
+        make_questions.style.display = 'none';
         hand.style.display = 'none';
         controls.style.display = 'inline';
     }
