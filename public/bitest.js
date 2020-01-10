@@ -36,10 +36,19 @@ make_questions.addEventListener("keyup", e => {
     if (e.keyCode == 13) {
         e.preventDefault();
         socket.emit('set-question', roomName, make_questions.value);
-        clearInterval();
+        // clearInterval();
         showMessage(make_questions.value);
-        where_make_questions.style.display = 'none';
-        make_questions.style.display = 'none' //for phone keyboard
+
+        //for phone keyboard
+        setTimeout(() => {
+            make_questions.focus();
+            setTimeout(() => {
+                where_make_questions.style.display = 'none';
+                make_questions.style.display = 'none';
+            }, 50)
+        }, 50)
+
+
         hand.style.display = 'none';
     }
 });
