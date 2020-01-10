@@ -21,8 +21,9 @@ const iknow = document.getElementById("iknow");
 
 const lecards = document.getElementById("lecards");
 const papers = document.getElementById("papers");
+// const timer = document.getElementById("timer");
 
-function showMessage(question){
+function showMessage(question) {
     message.style.display = 'inline';
     Mess.innerHTML = question;
     make_questions.value = "";
@@ -33,7 +34,10 @@ make_questions.addEventListener("keyup", e => {
     if (e.keyCode == 13) {
         e.preventDefault();
         socket.emit('set-question', roomName, make_questions.value);
+        clearInterval();
         showMessage(make_questions.value);
+        where_make_questions.style.display = 'none';
+        hand.style.display = 'none';
     }
 });
 
@@ -86,6 +90,7 @@ function AnimateRotate(ele, angle, rotateFrom, durat) {
 
 hand.addEventListener("click", e => {
     socket.emit('iknow', roomName);
+    hand.style.display = 'none';
     showAnsw(iknow);
 });
 
@@ -95,3 +100,17 @@ function doStart() {
     setTimeout(() => { lecards.style.display = 'none'; }, 2000);
     setTimeout(() => { papers.style.display = 'inline'; }, 2000);
 }
+
+// function timerStart() {
+//     var time = 30;
+//     setInterval(() => {
+//         if (time != 0) {
+//             time--;
+//             timer.innerHTML = time;
+//         } else {
+//             clearInterval();
+//             socket.emit('slower', roomName, 's');
+//             doAnimation();
+//         }
+//     }, 1000);
+// }

@@ -144,7 +144,11 @@ function nextPlayer(io, room) {
             io.sockets.to(room).emit('next-step', rooms[room].playOrder);
         } else {
             // SEND WINNER STATUS
-            io.sockets.to(room).emit('winner', rooms[room].playOrder);
+            io.sockets.to(room).emit('winner', rooms[room].playOrder,
+                [rooms[room].users[rooms[room].readyUsers[0]],
+                    rooms[room].users[rooms[room].readyUsers[1]],
+                    rooms[room].users[rooms[room].readyUsers[2]]]
+            );
             delete rooms[room];
         }
     }

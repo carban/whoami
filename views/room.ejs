@@ -33,12 +33,14 @@
                 <div id="message" class="animated heartBeat">
                     <h6 id="Mess">Message</h6>
                 </div>
-                <!-- <h4 id="two" class="misterys"></h4>
-                <h4 id="three" class="misterys"></h4> -->
-                <img class="hand animated pulse infinite slow" src="hand.png" id="hand" alt="">
-                <!-- <div class="hand animated bounce infinite slower">
-                    <h6>I Know</h6>
+
+                <!-- <div id="timer">
+                    30
                 </div> -->
+                
+
+                <img class="hand animated pulse infinite" src="hand.png" id="hand" alt="">
+
                 <img class="papers" id="papers" src="papers.png">
                 <img class="lecards" id="lecards" src="cards.png">
                 <img class="lemap" src="letest.png">
@@ -82,6 +84,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
+                            <h5><i>Room name: <%= roomName %></i></h5>
                             <h4>Write the name of your character</h4>
                             <form>
                                 <input type="text" id="mistery" name="mistery" required autofocus>
@@ -116,6 +119,7 @@
                         <div class="modal-body">
                             <h2 id="finalmsn"></h2>
                             <!-- <a href="http://localhost:3000/">Go to Home</a> -->
+                            <h5 id="finalchar"></h5>
                             <button class="btn btn-primary" id="goto">
                                 <b>Go to home</b> 
                             </button>

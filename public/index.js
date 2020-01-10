@@ -11,6 +11,7 @@ const divThree = document.getElementById('divThree');
 
 const finalmodal = document.getElementById('finalmodal');
 const finalmsn = document.getElementById('finalmsn');
+const finalchar = document.getElementById('finalchar');
 
 var personal;
 
@@ -19,7 +20,7 @@ $('#MistaryNameModal').modal('show');
 
 
 function registerOfNewPlayer() {
-    console.log("dsfsfds");
+    // console.log("dsfsfds");
     socket.emit('add-mistery', roomName, mistery.value);
     mistery.value = "";
     $('#waitingModal').modal('show');
@@ -27,11 +28,11 @@ function registerOfNewPlayer() {
 
 socket.on('user-connected', msg => {
     // One user is in the room
-    console.log(msg);
+    // console.log(msg);
 })
 
 socket.on('state-mistery', count => {
-    console.log("Llego!!!");
+    // console.log("Llego!!!");
     usersConnected.innerHTML = "Ready Users: " + count;
     if (count == 3) {
         $('#waitingModal').modal('hide');
@@ -42,7 +43,7 @@ socket.on('state-mistery', count => {
 
 socket.on('position', data => {
     personal = data;
-    console.log(personal);
+    // console.log(personal);
     doStart();
     setTimeout(() => {
         if (personal.posi == 1) {
@@ -90,6 +91,7 @@ socket.on('get-yes', d => {
     } else {
         showAnsw(ANSyes2);
         iorder = true;
+        message.style.display = 'none';
     }
 })
 
@@ -100,6 +102,7 @@ socket.on('get-no', d => {
     } else {
         showAnsw(ANSno);
         iorder = true;
+        message.style.display = 'none';
     }
 })
 
@@ -121,11 +124,21 @@ socket.on('get-iknow', dat => {
     showAnsw(iknow);
 })
 
-socket.on('winner', player => {
+socket.on('winner', (player, chars) => {
     if (player == personal.posi) {
         finalmsn.innerHTML = "VICTORY";
     } else {
         finalmsn.innerHTML = "GAME OVER";
     }
+    var char = "Character: ";
+    if (personal.posi == 1) {
+        char += chars[2];
+    }else if (personal.posi == 2) {
+        char += chars[0];
+    }else{
+        char += chars[1];
+    }
+    finalchar.innerHTML = char;
+
     $('#finalmodal').modal('show');
 })
