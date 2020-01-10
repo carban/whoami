@@ -41,7 +41,7 @@ body {
 }
 
 .papers {
-    position: fixed;
+    position: absolute;
     margin:0 auto;
     width: 300px; 
     height: 340px;
@@ -60,7 +60,7 @@ body {
 }
 
 .hand{
-    position: fixed;
+    position: absolute;
     margin:0 auto;
     width: 50px;
     height: 50px;

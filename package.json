@@ -4,7 +4,8 @@
   "description": "Who am I Game",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "mon": "nodemon index.js"
   },
   "author": "carban",
   "license": "ISC",
