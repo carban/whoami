@@ -37,7 +37,7 @@
                 <!-- <div id="timer">
                     30
                 </div> -->
-                
+
 
                 <img class="hand animated pulse infinite" src="hand.png" id="hand" alt="">
 
@@ -124,13 +124,45 @@
                             <!-- <a href="http://localhost:3000/">Go to Home</a> -->
                             <h5 id="finalchar"></h5>
                             <button class="btn btn-primary" id="goto">
-                                <b>Go to home</b> 
+                                <b>Go to home</b>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Modal4 -->
+            <div class="modal fade" id="shortcuts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Shortcuts</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="list-group" id="listOfShorts">
+                                <li class="list-group-item" onclick="sendShort('Am I a real?')">Am I a real?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I a woman?')">Am I a woman?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I from Colombia?')">Am I from
+                                    Colombia?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I old (> 50)?')">Am I old (> 50)?
+                                </li>
+                                <li class="list-group-item" onclick="sendShort('Am I young? (< 30)')">Am I young? (<
+                                        30)</li> <li class="list-group-item"
+                                        onclick="sendShort('Am I a soccer player??')">Am I a soccer player?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I a Singer?')">Am I a Singer?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I a Hollywood Star?')">Am I a
+                                    Hollywood Star?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I an Actor?')">Am I an Actor?</li>
+                                <li class="list-group-item" onclick="sendShort('Am I a DJ Vaas?')">Am I a DJ Vaas?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </center>
         <script>

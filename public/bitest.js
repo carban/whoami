@@ -24,7 +24,6 @@ const iknow = document.getElementById("iknow");
 
 const lecards = document.getElementById("lecards");
 const papers = document.getElementById("papers");
-// const timer = document.getElementById("timer");
 
 function showMessage(question) {
     message.style.display = 'inline';
@@ -34,14 +33,24 @@ function showMessage(question) {
 }
 
 function sendQ() {
-    socket.emit('set-question', roomName, make_questions.value);
-    showMessage(make_questions.value);
+    if (make_questions.value != "") {
+        socket.emit('set-question', roomName, make_questions.value);
+        showMessage(make_questions.value);
 
-    where_make_questions.style.display = 'none';
-    make_questions.style.display = 'none';
-    btnsend.style.display = 'none';
+        where_make_questions.style.display = 'none';
+        make_questions.style.display = 'none';
+        btnsend.style.display = 'none';
 
-    hand.style.display = 'none';
+        hand.style.display = 'none';
+    }else{
+        $('#shortcuts').modal('show');
+    }
+}
+
+function sendShort(q) {
+    make_questions.value = q;
+    $('#shortcuts').modal('hide');
+    sendQ();
 }
 
 function showAnsw(ele) {
@@ -53,14 +62,12 @@ function openYes() {
     socket.emit('say-yes', roomName, 'y');
     showAnsw(ANSyes);
     btnYes.disabled = true; btnNo.disabled = true;
-    // setTimeout(function(){ btnYes.disabled = false; btnNo.disabled = false; }, 1500);
 }
 
 function openNo() {
     socket.emit('say-no', roomName, 'n');
     showAnsw(ANSno2);
     btnYes.disabled = true; btnNo.disabled = true;
-    // setTimeout(function(){ btnYes.disabled = false; btnNo.disabled = false; }, 1500);
 }
 
 rotation = 0;
@@ -103,17 +110,3 @@ function doStart() {
     setTimeout(() => { lecards.style.display = 'none'; }, 2000);
     setTimeout(() => { papers.style.display = 'inline'; }, 2000);
 }
-
-// function timerStart() {
-//     var time = 30;
-//     setInterval(() => {
-//         if (time != 0) {
-//             time--;
-//             timer.innerHTML = time;
-//         } else {
-//             clearInterval();
-//             socket.emit('slower', roomName, 's');
-//             doAnimation();
-//         }
-//     }, 1000);
-// }
