@@ -70,9 +70,9 @@ function openNo() {
     btnYes.disabled = true; btnNo.disabled = true;
 }
 
-rotation = 0;
-start = 0;
-yepIknow = true;
+var rotation = 0;
+var start = 0;
+var yepIknow = true;
 
 function doAnimation() {
     var ele = $('.lemap');

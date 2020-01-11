@@ -141,9 +141,9 @@ socket.on('winner', (player, chars) => {
     var char = "Character: ";
     if (personal.posi == 1) {
         char += chars[2];
-    }else if (personal.posi == 2) {
+    } else if (personal.posi == 2) {
         char += chars[0];
-    }else{
+    } else {
         char += chars[1];
     }
     finalchar.innerHTML = char;
