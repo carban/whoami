@@ -110,3 +110,7 @@ function doStart() {
     setTimeout(() => { lecards.style.display = 'none'; }, 2000);
     setTimeout(() => { papers.style.display = 'inline'; }, 2000);
 }
+
+function getRooms() {
+    socket.emit('get-rooms');
+}

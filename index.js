@@ -109,6 +109,9 @@ io.on('connection', socket => {
         rooms[room].iknow = true;
         socket.to(room).broadcast.emit('get-iknow', 'iknow');
     })
+    socket.on('get-rooms', () => {
+        io.sockets.to(socket.id).emit('get-rooms', rooms);
+    })
 });
 
 // this is not my code https://github.com/carban/Realtime-Chat-App-With-Rooms/blob/master/server.js

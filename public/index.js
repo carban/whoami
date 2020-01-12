@@ -150,3 +150,7 @@ socket.on('winner', (player, chars) => {
 
     $('#finalmodal').modal('show');
 })
+
+socket.on('get-rooms', rooms => {
+    console.log(rooms);
+})
