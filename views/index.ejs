@@ -67,8 +67,18 @@
         const btnjoin = document.getElementById("lejoin");
         const inpjoin = document.getElementById("inJoin");
         btnjoin.addEventListener("click", () => {
-            window.location.replace(window.location.href + inpjoin.value);
+            if (inpjoin.value == '') {
+                alert("Insert room code");
+            } else {
+                window.location.replace(window.location.href + inpjoin.value);
+            }
         })
+        inpjoin.addEventListener("keyup", e => {
+            if (e.keyCode === 13) {
+                event.preventDefault();
+                btnjoin.click(); // click on the button
+            }
+        }); 
     </script>
     <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
 

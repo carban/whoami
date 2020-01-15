@@ -29,7 +29,7 @@ function showMessage(question) {
     message.style.display = 'inline';
     Mess.innerHTML = question;
     make_questions.value = "";
-    setTimeout(function () { message.style.display = 'none'; }, 3000);
+    // setTimeout(function () { message.style.display = 'none'; }, 3000);
 }
 
 function sendQ() {
@@ -109,8 +109,4 @@ function doStart() {
     AnimateRotate(ele, -120, 0, 2000);
     setTimeout(() => { lecards.style.display = 'none'; }, 2000);
     setTimeout(() => { papers.style.display = 'inline'; }, 2000);
-}
-
-function getRooms() {
-    socket.emit('get-rooms');
 }

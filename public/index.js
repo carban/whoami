@@ -23,9 +23,12 @@ $('#MistaryNameModal').modal('show');
 
 function registerOfNewPlayer() {
     // console.log("dsfsfds");
-    socket.emit('add-mistery', roomName, mistery.value);
-    mistery.value = "";
-    $('#waitingModal').modal('show');
+    if (mistery.value != "") {
+        socket.emit('add-mistery', roomName, mistery.value);
+        mistery.value = "";
+        $('#MistaryNameModal').modal('hide');
+        $('#waitingModal').modal('show');
+    }
 }
 
 socket.on('user-connected', msg => {
@@ -124,7 +127,7 @@ socket.on('next-step', player => {
         hand.style.display = 'none';
         controls.style.display = 'inline';
     }
-    // alert(player);
+    message.style.display = 'none';
     doAnimation();
 })
 
@@ -149,8 +152,4 @@ socket.on('winner', (player, chars) => {
     finalchar.innerHTML = char;
 
     $('#finalmodal').modal('show');
-})
-
-socket.on('get-rooms', rooms => {
-    console.log(rooms);
 })
