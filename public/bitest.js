@@ -114,12 +114,16 @@ function doStart() {
 }
 
 function search(m) {
+    var query;
+    if (m == 1) {
+        query = one.innerHTML;
+    } else if (m == 2) {
+        query = two.innerHTML;
+    }else {
+        query = three.innerHTML;
+    }
+    console.log("https://en.m.wikipedia.org/w/index.php?search="+query+"&title=Special%3ASearch&go=Go&ns0=1");
+    
+    document.getElementById("eframe").src = "https://en.m.wikipedia.org/w/index.php?search="+query+"&title=Special%3ASearch&go=Go&ns0=1";
     $('#modalSearch').modal('show');
-    // if (m == 1) {
-        
-    // } else if (m == 2) {
-        
-    // }else {
-        
-    // }
 }

@@ -71,7 +71,7 @@
         <button onclick="openIknow()">U</button>
         <button onclick="doStart()">C</button>
         <button onclick="timerStart()">T</button>
-        <button onclick="search(1)">T</button>
+        <button onclick="search(0)">WIKI</button>
         <div id="controls">
             <button id="btnYes" type="button" class="btn btn-success wannaAns" onclick="openYes()"> <b>Yes</b> </button>
             <button id="btnNo" type="button" class="btn btn-danger wannaAns" onclick="openNo()"> <b>No</b> </button>
@@ -127,10 +127,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" id="modalSearchBody">
-                        <iframe src="https://www.google.com/">
-                            <!-- <p>Your browser does not support iframes.</p> -->
-                        </iframe>
+                    <div class="modal-body">
+                        <embed id="eframe" src="https://en.m.wikipedia.org/" width="100%" height="500px"></embed>
                     </div>
                 </div>
             </div>

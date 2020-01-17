@@ -2,12 +2,14 @@ const path = require('path');
 const express = require('express');
 const socketio = require('socket.io');
 const helmet = require('helmet');
+const cors = require('cors');
 
 const app = express();
 
 // Settings
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet.frameguard({ action: "sameorigin" }));
+app.use(cors());
 app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
 app.set('view engine', 'ejs');
