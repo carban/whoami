@@ -190,5 +190,6 @@ app.get('/:room', (req, res) => {
 })
 
 app.get('/get/rooms', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
     res.json(rooms);
 })
