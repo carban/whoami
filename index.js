@@ -1,10 +1,13 @@
 const path = require('path');
 const express = require('express');
-const app = express();
 const socketio = require('socket.io');
+const helmet = require('helmet');
+
+const app = express();
 
 // Settings
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }));
+app.use(helmet.frameguard({ action: "sameorigin" }));
 app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -35,6 +38,7 @@ io.on('connection', socket => {
                 rooms[room].count -= 1;
             }
             rooms[room].readyUsers = []; // para que no quede registro
+            // rooms[room].justOne = true;
             delete rooms[room].users[socket.id];
             // console.log("someone left -->", rooms);
         })

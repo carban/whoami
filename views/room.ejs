@@ -51,15 +51,15 @@
                 <div class="col"></div>
                 <div class="col" id="divOne">
                     <div id="colorone"></div>
-                    <h6 id="one"></h6>
+                    <h6 id="one" onclick="search(1)"></h6>
                 </div>
                 <div class="col" id="divTwo">
                     <div id="colortwo"></div>
-                    <h6 id="two"></h6>
+                    <h6 id="two" onclick="search(2)"></h6>
                 </div>
                 <div class="col" id="divThree">
                     <div id="colorthree"></div>
-                    <h6 id="three"></h6>
+                    <h6 id="three" onclick="search(3)"></h6>
                 </div>
                 <div class="col"></div>
                 <div class="col"></div>
@@ -90,8 +90,7 @@
                             <h5><i>Room name: <%= roomName %></i></h5>
                             <h4>Write the name of your character</h4>
                             <input type="text" id="mistery" name="mistery" required autofocus>
-                            <button type="submit" class="btn btn-primary"
-                                onClick="registerOfNewPlayer()">Ok</button>
+                            <button type="submit" class="btn btn-primary" onClick="registerOfNewPlayer()">Ok</button>
                         </div>
                     </div>
                 </div>
@@ -157,6 +156,26 @@
                                 <li class="list-group-item" onclick="sendShort('Am I an Actor?')">Am I an Actor?</li>
                                 <li class="list-group-item" onclick="sendShort('Am I DJ Vaas?')">Am I a DJ Vaas?</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal5 -->
+            <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Searching</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="modalSearchBody">
+                            <iframe src="https://www.w3schools.com">
+                                <p>Your browser does not support iframes.</p>
+                            </iframe>
                         </div>
                     </div>
                 </div>

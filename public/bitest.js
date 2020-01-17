@@ -25,6 +25,8 @@ const iknow = document.getElementById("iknow");
 const lecards = document.getElementById("lecards");
 const papers = document.getElementById("papers");
 
+const modalSearch = document.getElementById("modalSearch");
+
 function showMessage(question) {
     message.style.display = 'inline';
     Mess.innerHTML = question;
@@ -109,4 +111,15 @@ function doStart() {
     AnimateRotate(ele, -120, 0, 2000);
     setTimeout(() => { lecards.style.display = 'none'; }, 2000);
     setTimeout(() => { papers.style.display = 'inline'; }, 2000);
+}
+
+function search(m) {
+    $('#modalSearch').modal('show');
+    // if (m == 1) {
+        
+    // } else if (m == 2) {
+        
+    // }else {
+        
+    // }
 }
